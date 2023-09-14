@@ -1,1 +1,9 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-icon, #main-logo, #search-icon, #clue-club-logo {
+  width: 50px;
+}/*# sourceMappingURL=main.css.map */

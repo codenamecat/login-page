@@ -6,4 +6,15 @@
 
 #menu-icon, #main-logo, #search-icon, #clue-club-logo {
   width: 50px;
+}
+
+#dropdown-menu, #search-bar {
+  display: none;
+}
+#dropdown-menu.visible, #search-bar.visible {
+  display: block;
+}
+
+.category-name {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

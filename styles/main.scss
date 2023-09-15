@@ -7,3 +7,15 @@
 #menu-icon, #main-logo, #search-icon, #clue-club-logo {
   width: 50px;
 }
+
+#dropdown-menu, #search-bar {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.category-name {
+  text-decoration: none;
+}

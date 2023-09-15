@@ -15,29 +15,35 @@
 
 <body>
   <header>
-    <img src="./assets/menu.svg" id="menu-icon" alt="Menu icon" />
-    <img src="./assets/logo.svg" id="main-logo" alt="Clue logo" />
-    <img src="./assets/search.svg" id="search-icon" alt="Search icon" />
-    <nav id="nav-menu">
-      <h2>Categories</h2>
-      <ul>
-        <li>Art</li>
-        <li>Photography</li>
-        <li>Fashion</li>
-        <li>Life & Culture</li>
-        <li>Music</li>
-        <li>Film & TV</li>
-      </ul>
+    <nav>
+      <img src="./assets/menu.svg" id="menu-icon" alt="Menu icon" />
+      <img src="./assets/logo.svg" id="main-logo" alt="Clue logo" />
+      <img src="./assets/search.svg" id="search-icon" alt="Search icon" />
+      <div id="dropdown-menu">
+        <h2>Categories</h2>
+        <ul>
+          <a href="#" class="category-name"><li>Art</li></a>
+          <a href="#" class="category-name"><li>Photography</li></a>
+          <a href="#" class="category-name"><li>Fashion</li></a>
+          <a href="#" class="category-name"><li>Life & Culture</li></a>
+          <a href="#" class="category-name"><li>Music</li></a>
+          <a href="#" class="category-name"><li>Film & TV</li></a>
+        </ul>
+      </div>
+      <div id="search-bar">
+        <input type="text" />
+        <button>Search</button>
+      </div>
     </nav>
   </header>
   <main>
     <img src="./assets/club-logo.svg" id="clue-club-logo" alt="Clue club logo" />
     <form>
-      <input type="email" />
-      <input type="password" />
-      <button>Login</button>
+      <input type="email" id="email" placeholder="Your Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="login-button">Login</button>
     </form>
-    <button>Sign Up</button>
+    <a href="#"><button id="signup-button">Sign Up</button></a>
   </main>
 </body>
 

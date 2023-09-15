@@ -2,20 +2,64 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'League Gothic', sans-serif;
 }
 
-#menu-icon, #main-logo, #search-icon, #clue-club-logo {
+body {
+  height: 100vh;
+  background-color: black;
+}
+
+.logos-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#menu-icon, #search-icon {
+  width: 20px;
+}
+
+#main-logo, #clue-club-logo {
   width: 50px;
 }
 
 #dropdown-menu, #search-bar {
   display: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 20px 24px;
 
   &.visible {
     display: block;
   }
 }
 
+#dropdown-menu {
+  border-bottom: 2px solid white;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    border-bottom: 2px solid white;
+    line-height: 70px;
+  }
+  ul {
+    margin: 20px 0;
+  }
+
+  li {
+    margin: 10px 0;
+    list-style: none;
+  }
+}
+
 .category-name {
   text-decoration: none;
+  font-size: 32px;
+
+  &:visited {
+    color: white;
+  }
 }

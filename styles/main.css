@@ -10,6 +10,10 @@ body {
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logos-container {
   background-color: white;
   display: flex;
@@ -21,23 +25,23 @@ body {
   width: 20px;
 }
 
-#main-logo, #clue-club-logo {
+#main-logo {
   width: 50px;
 }
 
-#dropdown-menu, #search-bar {
+#dropdown-menu {
   display: none;
+  width: 100%;
   color: white;
+  background-color: black;
   text-transform: uppercase;
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
-#dropdown-menu.visible, #search-bar.visible {
+#dropdown-menu.visible {
   display: block;
+  position: absolute;
 }
 
-#dropdown-menu {
-  border-bottom: 2px solid white;
-}
 #dropdown-menu h2 {
   font-size: 40px;
   font-weight: 400;
@@ -46,6 +50,7 @@ body {
 }
 #dropdown-menu ul {
   margin: 20px 0;
+  border-bottom: 2px solid white;
 }
 #dropdown-menu li {
   margin: 10px 0;
@@ -53,9 +58,78 @@ body {
 }
 
 .category-name {
-  text-decoration: none;
   font-size: 32px;
 }
 .category-name:visited {
+  color: white;
+}
+
+.login-button, .signup-button {
+  display: block;
+  width: 90%;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border: none;
+  margin: 14px auto;
+  background-color: white;
+}
+
+.login-button {
+  background-color: #e370f5;
+  margin-top: 30px;
+}
+
+#search-bar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  background-color: black;
+}
+#search-bar.visible {
+  display: flex;
+}
+
+#search-input {
+  width: 50%;
+  background-color: transparent;
+  color: white;
+  font-size: 32px;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+#search-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.clue-club-logo {
+  width: 65%;
+  display: block;
+  margin: 40px auto;
+}
+
+#email, #password {
+  display: block;
+  margin: 14px auto;
+  width: 90%;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 28px;
+  padding: 10px 20px;
+}
+#email::-moz-placeholder, #password::-moz-placeholder {
+  text-transform: uppercase;
+  color: white;
+}
+#email::placeholder, #password::placeholder {
+  text-transform: uppercase;
   color: white;
 }/*# sourceMappingURL=main.css.map */

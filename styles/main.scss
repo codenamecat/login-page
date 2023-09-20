@@ -1,4 +1,7 @@
 $whiteBorder: 2px solid white;
+$maxWidth: 340px;
+$pink: #e370f5;
+$animation: 500ms ease-in; //to see effect properly, helpful link for tomorrow https://codepen.io/codypearce/pen/PdBXpj
 
 * {
   box-sizing: border-box;
@@ -25,6 +28,12 @@ a {
 
 #menu-icon, #search-icon {
   width: 20px;
+  cursor: pointer;
+  transition: $animation;
+
+  &.open-menu {
+    transform: rotate(45deg);
+  }
 }
 
 #main-logo {
@@ -75,33 +84,52 @@ a {
 .login-button, .signup-button {
   display: block;
   width: 90%;
+  max-width: $maxWidth;
   font-size: 32px;
   text-transform: uppercase;
   padding: 10px 0;
-  border: none;
   margin: 14px auto;
   background-color: white;
+  cursor: pointer;
 }
 
 .login-button {
-  background-color: #e370f5;
+  background-color: $pink;
   margin-top: 30px;
+  border: 2px solid $pink;
+
+  &:hover {
+    background-color: transparent;
+    color: $pink;
+  }
+}
+
+.signup-button {
+  border: $whiteBorder;
+
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
 }
 
 #search-bar {
   display: none;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding: 16px 0;
   background-color: black;
 
   &.visible {
     display: flex;
+    position: absolute;
   }
 }
 
 #search-input {
   width: 50%;
+  max-width: $maxWidth;
   background-color: transparent;
   color: white;
   font-size: 32px;
@@ -120,6 +148,7 @@ a {
 
 .clue-club-logo {
   width: 65%;
+  max-width: $maxWidth;
   display: block;
   margin: 40px auto;
 }
@@ -128,11 +157,12 @@ a {
   display: block;
   margin: 14px auto;
   width: 90%;
+  max-width: $maxWidth;
   background-color: transparent;
   color: white;
   border: $whiteBorder;
-  font-size: 28px;
-  padding: 10px 20px;
+  font-size: 24px;
+  padding: 14px 20px;
 
   &::placeholder {
     text-transform: uppercase;

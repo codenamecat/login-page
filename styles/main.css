@@ -23,6 +23,11 @@ a {
 
 #menu-icon, #search-icon {
   width: 20px;
+  cursor: pointer;
+  transition: 500ms ease-in;
+}
+#menu-icon.open-menu, #search-icon.open-menu {
+  transform: rotate(45deg);
 }
 
 #main-logo {
@@ -67,32 +72,49 @@ a {
 .login-button, .signup-button {
   display: block;
   width: 90%;
+  max-width: 340px;
   font-size: 32px;
   text-transform: uppercase;
   padding: 10px 0;
-  border: none;
   margin: 14px auto;
   background-color: white;
+  cursor: pointer;
 }
 
 .login-button {
   background-color: #e370f5;
   margin-top: 30px;
+  border: 2px solid #e370f5;
+}
+.login-button:hover {
+  background-color: transparent;
+  color: #e370f5;
+}
+
+.signup-button {
+  border: 2px solid white;
+}
+.signup-button:hover {
+  background-color: transparent;
+  color: white;
 }
 
 #search-bar {
   display: none;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding: 16px 0;
   background-color: black;
 }
 #search-bar.visible {
   display: flex;
+  position: absolute;
 }
 
 #search-input {
   width: 50%;
+  max-width: 340px;
   background-color: transparent;
   color: white;
   font-size: 32px;
@@ -111,6 +133,7 @@ a {
 
 .clue-club-logo {
   width: 65%;
+  max-width: 340px;
   display: block;
   margin: 40px auto;
 }
@@ -119,11 +142,12 @@ a {
   display: block;
   margin: 14px auto;
   width: 90%;
+  max-width: 340px;
   background-color: transparent;
   color: white;
   border: 2px solid white;
-  font-size: 28px;
-  padding: 10px 20px;
+  font-size: 24px;
+  padding: 14px 20px;
 }
 #email::-moz-placeholder, #password::-moz-placeholder {
   text-transform: uppercase;

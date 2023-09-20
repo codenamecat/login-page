@@ -9,6 +9,7 @@ const passwordInput = document.getElementById('password')
 
 menuBtn.addEventListener('click', () => {
   dropdownMenu.classList.toggle('visible')
+  menuBtn.classList.toggle('open-menu')
   searchBar.classList.remove('visible')
 })
 

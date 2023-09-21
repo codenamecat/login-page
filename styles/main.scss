@@ -1,7 +1,16 @@
 $whiteBorder: 2px solid white;
 $maxWidth: 340px;
 $pink: #e370f5;
-$animation: 500ms ease-in; //to see effect properly, helpful link for tomorrow https://codepen.io/codypearce/pen/PdBXpj
+$myAnimation: 350ms linear;
+
+@keyframes dropDown {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -13,6 +22,10 @@ $animation: 500ms ease-in; //to see effect properly, helpful link for tomorrow h
 body {
   height: 100vh;
   background-color: black;
+}
+
+main {
+  padding-bottom: 24px;
 }
 
 a {
@@ -29,10 +42,14 @@ a {
 #menu-icon, #search-icon {
   width: 20px;
   cursor: pointer;
-  transition: $animation;
+  transition: $myAnimation;
 
   &.open-menu {
-    transform: rotate(45deg);
+    transform: rotate(135deg);
+  }
+
+  &.open-search {
+    transform: rotateY(360deg);
   }
 }
 
@@ -47,6 +64,8 @@ a {
   background-color: black;
   text-transform: uppercase;
   padding: 20px 24px;
+  animation: dropDown $myAnimation;
+  transform-origin: top;
 
   &.visible {
     display: block;
@@ -75,6 +94,7 @@ a {
 
 .category-name {
   font-size: 32px;
+  color: white;
 
   &:visited {
     color: white;
@@ -91,6 +111,7 @@ a {
   margin: 14px auto;
   background-color: white;
   cursor: pointer;
+  transition: $myAnimation;
 }
 
 .login-button {
@@ -120,6 +141,8 @@ a {
   width: 100%;
   padding: 16px 0;
   background-color: black;
+  animation: dropDown $myAnimation;
+  transform-origin: top;
 
   &.visible {
     display: flex;

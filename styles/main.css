@@ -1,3 +1,11 @@
+@keyframes dropDown {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +16,10 @@
 body {
   height: 100vh;
   background-color: black;
+}
+
+main {
+  padding-bottom: 24px;
 }
 
 a {
@@ -24,10 +36,13 @@ a {
 #menu-icon, #search-icon {
   width: 20px;
   cursor: pointer;
-  transition: 500ms ease-in;
+  transition: 350ms linear;
 }
 #menu-icon.open-menu, #search-icon.open-menu {
-  transform: rotate(45deg);
+  transform: rotate(135deg);
+}
+#menu-icon.open-search, #search-icon.open-search {
+  transform: rotateY(360deg);
 }
 
 #main-logo {
@@ -41,6 +56,8 @@ a {
   background-color: black;
   text-transform: uppercase;
   padding: 20px 24px;
+  animation: dropDown 350ms linear;
+  transform-origin: top;
 }
 #dropdown-menu.visible {
   display: block;
@@ -64,6 +81,7 @@ a {
 
 .category-name {
   font-size: 32px;
+  color: white;
 }
 .category-name:visited {
   color: white;
@@ -79,6 +97,7 @@ a {
   margin: 14px auto;
   background-color: white;
   cursor: pointer;
+  transition: 350ms linear;
 }
 
 .login-button {
@@ -106,6 +125,8 @@ a {
   width: 100%;
   padding: 16px 0;
   background-color: black;
+  animation: dropDown 350ms linear;
+  transform-origin: top;
 }
 #search-bar.visible {
   display: flex;

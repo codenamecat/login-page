@@ -39,7 +39,7 @@ a {
   padding: 20px;
 }
 
-#menu-icon, #search-icon {
+.menu-icon, .search-icon {
   width: 20px;
   cursor: pointer;
   transition: $myAnimation;
@@ -51,6 +51,11 @@ a {
   &.open-search {
     transform: rotateY(360deg);
   }
+}
+
+#menu-icon, #search-icon {
+  background-color: transparent;
+  border: none;
 }
 
 #main-logo {

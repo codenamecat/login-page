@@ -30,24 +30,26 @@ a {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
 }
 
-.menu-icon, .search-icon {
+#menu-icon, #search-icon {
   width: 20px;
-  cursor: pointer;
   transition: 350ms linear;
 }
-.menu-icon.open-menu, .search-icon.open-menu {
+#menu-icon.open-menu, #search-icon.open-menu {
   transform: rotate(135deg);
 }
-.menu-icon.open-search, .search-icon.open-search {
+#menu-icon.open-search, #search-icon.open-search {
   transform: rotateY(360deg);
 }
 
-#menu-icon, #search-icon {
+#menu-button, #search-button {
   background-color: transparent;
   border: none;
+  padding: 5px;
+  cursor: pointer;
 }
 
 #main-logo {
@@ -111,7 +113,7 @@ a {
   border: 2px solid #e370f5;
 }
 .login-button:hover {
-  background-color: transparent;
+  background-color: black;
   color: #e370f5;
 }
 
@@ -119,7 +121,7 @@ a {
   border: 2px solid white;
 }
 .signup-button:hover {
-  background-color: transparent;
+  background-color: black;
   color: white;
 }
 
@@ -148,13 +150,14 @@ a {
   border-bottom: 2px solid white;
 }
 
-#search-button {
+#search-bar-button {
   background-color: transparent;
   color: white;
   border: none;
   text-transform: uppercase;
   font-size: 32px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .clue-club-logo {

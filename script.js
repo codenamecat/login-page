@@ -8,6 +8,7 @@ const emailInput = document.getElementById('email')
 const passwordInput = document.getElementById('password')
 const menuIcon = document.getElementById('menu-icon')
 const searchIcon = document.getElementById('search-icon')
+const loginMessage = document.getElementById('login-message')
 
 menuBtn.addEventListener('click', () => {
   dropdownMenu.classList.toggle('visible')
@@ -26,7 +27,21 @@ searchBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', (event) => {
   event.preventDefault() // you can't actually log in, no need for the page to refresh
 
+  
   if (!emailInput.value || !passwordInput.value) {
-    alert('Please provide your email and password') // placeholder, will implement a better solution
+    loginMessage.textContent = "You can't log in without email and password"
+    removeMessage()
+  } else if (!emailInput.value.includes('@')) {
+    loginMessage.textContent = 'Invalid email address'
+    removeMessage()
+  } else {
+    loginMessage.textContent= 'You logged in!'
+    removeMessage()
   }
 })
+
+const removeMessage = () => {
+  setTimeout(() => {
+    loginMessage.textContent = ''
+  }, 5000)
+}

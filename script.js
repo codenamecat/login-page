@@ -25,17 +25,20 @@ searchBtn.addEventListener('click', () => {
 })
 
 loginBtn.addEventListener('click', (event) => {
-  event.preventDefault() // you can't actually log in, no need for the page to refresh
-
+  event.preventDefault()
+  // you can't actually log in so this is just extra
   
   if (!emailInput.value || !passwordInput.value) {
-    loginMessage.textContent = "You can't log in without email and password"
+    loginMessage.textContent = 'Email and password required'
+    loginMessage.classList.add('visible')
     removeMessage()
   } else if (!emailInput.value.includes('@')) {
     loginMessage.textContent = 'Invalid email address'
+    loginMessage.classList.add('visible')
     removeMessage()
   } else {
     loginMessage.textContent= 'You logged in!'
+    loginMessage.classList.add('visible')
     removeMessage()
   }
 })
@@ -43,5 +46,6 @@ loginBtn.addEventListener('click', (event) => {
 const removeMessage = () => {
   setTimeout(() => {
     loginMessage.textContent = ''
+    loginMessage.classList.remove('visible')
   }, 5000)
 }

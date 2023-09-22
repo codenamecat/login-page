@@ -208,4 +208,9 @@ a {
   margin: 0 auto;
   width: 90%;
   max-width: $maxWidth;
+
+  &.visible {
+    animation: dropDown $myAnimation;
+    transform-origin: top;
+  }
 }

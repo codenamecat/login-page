@@ -194,4 +194,8 @@ a {
   margin: 0 auto;
   width: 90%;
   max-width: 340px;
+}
+#login-message.visible {
+  animation: dropDown 350ms linear;
+  transform-origin: top;
 }/*# sourceMappingURL=main.css.map */
